@@ -19,3 +19,6 @@ broadcast 217.149.135.63
 .......
 sudo reboot
 ```
+
+### Autostart the bell script
+Move the ```bell.sh``` from the repo to ```/etc/init.d/bell```. Then run ```sudo update-rc.d bell defaults```
