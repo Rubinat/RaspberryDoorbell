@@ -6,7 +6,7 @@ The server side of the wireless doorbell project (raspberry running a tcp node s
 See also http://github.com/Rubinat/doorbell for documentation.
 
 ### Set fixed IP for RaspberryPI at VCXL
-(values retrieved by following the steps on http://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address)
+(values retrieved by following [these steps](http://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address))
 ```
 sudo nano /etc/network/interfaces
 ......
@@ -21,4 +21,4 @@ sudo reboot
 ```
 
 ### Autostart the bell script
-Move the ```bell.sh``` from the repo to ```/etc/init.d/bell```. Then run ```sudo update-rc.d bell defaults```
+Move the ```bell.sh``` from the repo to ```/etc/init.d/bell```. Then run ```sudo update-rc.d bell defaults``` (as described [here](http://raspberrywebserver.com/serveradmin/run-a-script-on-start-up.html))
