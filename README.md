@@ -5,7 +5,7 @@ The server side of the wireless doorbell project (raspberry running a tcp node s
 
 See also http://github.com/Rubinat/doorbell for documentation.
 
-Set fixed IP for RaspberryPI at VCXL:
+### Set fixed IP for RaspberryPI at VCXL
 (values retrieved by following the steps on http://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address)
 ```
 sudo nano /etc/network/interfaces
