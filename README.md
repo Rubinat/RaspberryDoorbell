@@ -16,17 +16,9 @@ netmask 255.255.255.192
 network 217.149.135.0
 gateway 217.149.135.62
 broadcast 217.149.135.63
+dns-nameservers 8.8.8.8 8.8.4.4
 .......
 sudo reboot
-```
-
-### Setup DNS
-You also need to set a DNS server if you want to be able to access online repositories.
-```
-sudo nano /etc/resolv.conf
-....
-nameserver 8.8.8.8
-name server 8.8.4.4
 ```
 
 ### Install gpio-admin
