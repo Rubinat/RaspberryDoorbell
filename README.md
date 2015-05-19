@@ -35,7 +35,7 @@ At the time of writing there is an open pull request for gpio-admin by VipSaran 
 ### Autostart the bell script
 Make a symbolic link to bell.sh
 ```bash
-sudo ln ~/RaspberryDoorbell/bell.sh /etc/init.d/bell
+sudo ln -s ~/RaspberryDoorbell/bell.sh /etc/init.d/bell
 ```
 Then run `sudo update-rc.d bell defaults` (as described [here](http://raspberrywebserver.com/serveradmin/run-a-script-on-start-up.html))
 
