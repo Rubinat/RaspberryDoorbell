@@ -44,6 +44,8 @@ setInterval(function() {
     for (var i in sockets) {
       sockets[i].write('off\n');
     }
+  } else {
+    //no result from readButtonMatrix
   }
 
   vorige = result;
@@ -63,13 +65,16 @@ function readButtonMatrix() {
 			var value = cols[kolom].readSync();
 			s = s + value;
 			
-			if (value==0) return [kolom,specifiek];
+			if (value==0) {
+        // console.log(s);
+        return [kolom,specifiek];
+      }
 			//console.log(kolomnummertje.join(','));
 		}
 		//console.log("- ");
 		s = s + " - ";
 	}
-	//console.log(s);
+	// console.log(s);
 	return null;
 }
 
