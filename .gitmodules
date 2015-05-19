@@ -1,0 +1,3 @@
+[submodule "quick2wire-gpio-admin"]
+	path = quick2wire-gpio-admin
+	url = https://github.com/VipSaran/quick2wire-gpio-admin.git
