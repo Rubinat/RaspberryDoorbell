@@ -30,7 +30,7 @@ name server 8.8.4.4
 ```
 
 ### Install gpio-admin
-`https://github.com/quick2wire/quick2wire-gpio-admin`
+https://github.com/quick2wire/quick2wire-gpio-admin
 
 ### Autostart the bell script
 Move the ```bell.sh``` from the repo to ```/etc/init.d/bell```. Then run ```sudo update-rc.d bell defaults``` (as described [here](http://raspberrywebserver.com/serveradmin/run-a-script-on-start-up.html))
