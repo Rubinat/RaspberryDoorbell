@@ -15,16 +15,17 @@ case "$1" in
     start)
         #echo "Starting"
         sleep 10
-        sudo sh /home/pi/TCP-Button/initports.sh
-        sudo node /home/pi/TCP-Button/nodeServer.js
+        date >> /tmp/bell.log
+        sudo sh ~/RaspberryDoorbell/initports.sh >> /tmp/bell.log
+        sudo node ~/RaspberryDoorbell/nodeServer.js >> /tmp/bell.log
         ;;
    stop)
         #echo "Stopping"
         #killall initports.sh
-        killall /home/pi/TCP-Button/nodeServer.js
+        sudo killall -9 node
         ;;
     *)
-        echo "Usage: /etc/init.d/bel start|stop"
+        echo "Usage: /etc/init.d/bell start|stop"
         exit 1
         ;;
 esac
