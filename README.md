@@ -20,5 +20,13 @@ broadcast 217.149.135.63
 sudo reboot
 ```
 
+You also need to set a DNS server if you want to be able to access online repositories.
+```
+sudo nano /etc/resolv.conf
+....
+nameserver 8.8.8.8
+name server 8.8.4.4
+```
+
 ### Autostart the bell script
 Move the ```bell.sh``` from the repo to ```/etc/init.d/bell```. Then run ```sudo update-rc.d bell defaults``` (as described [here](http://raspberrywebserver.com/serveradmin/run-a-script-on-start-up.html))
