@@ -33,7 +33,9 @@ name server 8.8.4.4
 At the time of writing there is an open pull request for gpio-admin by VipSaran which solves a filepath issue to the gpio folders. I added VipSaran's fork as a submodule to our repository. So clone our repository recursively or use `git submodule update --init`. Make sure to `make` and `sudo make install` the gpio-project. Then run our `initports.sh` script to initialize the gpio pins.
 
 ### Autostart the bell script
-Move the ```bell.sh``` from the repo to ```/etc/init.d/bell```. Then run ```sudo update-rc.d bell defaults``` (as described [here](http://raspberrywebserver.com/serveradmin/run-a-script-on-start-up.html))
+Make a symbolic link to bell.sh
+`sudo ln ~/RaspberryDoorbell/bell.sh /etc/init.d/bell`
+Then run `sudo update-rc.d bell defaults` (as described [here](http://raspberrywebserver.com/serveradmin/run-a-script-on-start-up.html))
 
 ### VechtclubXL layout
 | Unit  |row-col| Unit |row-col| Unit  |row-col|Unit   |row-col|
