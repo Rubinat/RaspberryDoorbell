@@ -13,11 +13,12 @@
 
 case "$1" in
     start)
+        LOGFILE=/tmp/bell.log
         #echo "Starting"
         sleep 10
-        date >> /tmp/bell.log
-        sudo sh ~/RaspberryDoorbell/initports.sh >> /tmp/bell.log
-        sudo node ~/RaspberryDoorbell/nodeServer.js >> /tmp/bell.log
+        date >> $LOGFILE
+        ~/RaspberryDoorbell/initports.sh >> $LOGFILE 2>&1
+        node ~/RaspberryDoorbell/nodeServer.js >> $LOGFILE 2>&1
         ;;
    stop)
         #echo "Stopping"
