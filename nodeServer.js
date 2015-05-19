@@ -32,8 +32,8 @@ setInterval(function() {
 
 	var result = readButtonMatrix();
 	
-	if (result!='0,0') {
-		console.log(result.toString());
+	if (result) {
+		console.log(result); //.toString());
 		
 		for (var i in sockets) {
 			sockets[i].write(result+'\n');
