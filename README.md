@@ -32,6 +32,8 @@ sudo ln -s ~/RaspberryDoorbell/bell.sh /etc/init.d/bell
 Then run `sudo update-rc.d bell defaults` (as described [here](http://raspberrywebserver.com/serveradmin/run-a-script-on-start-up.html))
 
 ### VechtclubXL layout
+the layout is now part of the source code in `nodeServer.js`
+<del>
 | Unit  |row-col| Unit |row-col| Unit  |row-col|Unit   |row-col|
 |-------|-------|------|-------|-------|-------|-------|-------|
 | VCXL  | 0-0   | D1.2 | 1-0   | E1.5  | 2-0   |F1.18  | 3-0   |
@@ -45,3 +47,4 @@ Then run `sudo update-rc.d bell defaults` (as described [here](http://raspberryw
 | C2.3  | 0-8   | E1.2 | 1-8   | F1.10 | 2-8   |G2.4   | 3-8   |
 | C2.4  | 0-9   | E1.3 | 1-9   | F1.11 | 2-9   |G2.5   | 3-9   |
 | C2.5  | 0-10  | E1.4 | 1-10  | F1.17 | 2-10  |       |       |
+</del>
