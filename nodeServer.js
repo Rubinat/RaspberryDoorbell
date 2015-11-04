@@ -45,6 +45,7 @@ var rooms = [
 ];
 
 var status = [];
+var info = [];
 
 var vorige = 'eerste keer';
 
@@ -138,6 +139,7 @@ function callback_server_connection(socket){
       var roomName = getRoomNameById(id);
       console.log('roomName',roomName);
       status[roomName] = Math.floor(Date.now() / 1000);
+      info[roomName] = id;
     }
       
   });
@@ -180,7 +182,8 @@ app.get('/', function(req, res){
       var roomName = rooms[row][col];
       var timediff = status[roomName]!=undefined ? Math.floor(Date.now() / 1000) - status[roomName] : 0;
       var className = (status[roomName]==undefined) ? 'offline' : timediff>120 ? 'timeout' : 'online';
-      s += '<td width="25%" class="'+className+'"><a href="/ring/'+roomName+'">' + roomName + '</a></td>';
+      var title = info[roomName] || 'no info';
+      s += '<td width="25%" class="'+className+'"><a title="'+title+'" href="/ring/'+roomName+'">' + roomName + '</a></td>';
     }
     s += '</tr>';
   }
@@ -231,7 +234,8 @@ function getRoomNameById(id) {
   var rowcol = id.trim().substr(id.trim().lastIndexOf(' ')+1);
   var row = rowcol.split(',')[1]; //let op row,col omgedraaid
   var col = rowcol.split(',')[0];
-  return rooms[row][col];
+  if (row!=undefined && col!=undefined) return rooms[row][col];
+  else return "?";
 }
 
 
