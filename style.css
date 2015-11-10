@@ -1,0 +1,32 @@
+body {
+  font-family: Arial;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  max-width: 800px;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  font-size: 200%;
+  padding: 5px 5px 5px 5px;
+  width: 20%;
+  color: white;
+  cursor: pointer;
+}
+
+.offline {
+  background-color: red;
+}
+
+.timeout {
+  background-color: orange;
+}
+
+.online {
+  background-color: green;
+}
