@@ -5,6 +5,11 @@ The server side of the wireless doorbell project (raspberry running a tcp node s
 
 See also http://github.com/Rubinat/doorbell for documentation.
 
+### API
+GET: http://bel.vcxl.nl:8081/api/v1/status
+
+POST: http://bel.vcxl.nl:8081/api/v1/ring/F1.19
+
 ### Set fixed IP for RaspberryPI at VCXL
 (values retrieved by following [these steps](http://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address))
 ```
