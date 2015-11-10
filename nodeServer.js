@@ -180,8 +180,7 @@ app.get('/', function(req, res){
     s += '<tr>'
     for (var col=0; col<rooms[row].length; col++) {
       var roomName = rooms[row][col];
-      var timediff = status[roomName]!=undefined ? Math.floor(Date.now() / 1000) - status[roomName] : 0;
-      var className = (status[roomName]==undefined) ? 'offline' : timediff>120 ? 'timeout' : 'online';
+      var className = getOnlineStatusByRoomName(roomName);
       var title = info[roomName] || 'no info';
       s += '<td width="25%" class="'+className+'"><a title="'+title+'" href="/ring/'+roomName+'">' + roomName + '</a></td>';
     }
@@ -215,9 +214,32 @@ app.get('/ring/:roomName', function(req, res) {
   res.redirect('/');
 });
 
+app.get('/api/v1/status', function(req, res) {
+  var items = [];
+  for (var row=0; row<rooms.length; row++) {
+    for (var col=0; col<rooms[row].length; col++) {
+      var roomName = rooms[row][col];
+      items.push({
+        name:roomName, 
+        column:col, 
+        row:row, 
+        time:status[roomName], 
+        info:info[roomName], 
+        status: getOnlineStatusByRoomName(roomName)
+      })
+    }
+  }
+  res.json({ items: items });   
+});
+
 http.listen(8081, function(){
   console.log('listening on *:8081');
 });
+
+function getOnlineStatusByRoomName(roomName) {
+  var timediff = status[roomName]!=undefined ? Math.floor(Date.now() / 1000) - status[roomName] : 0;
+  return (status[roomName]==undefined) ? 'offline' : timediff>120 ? 'timeout' : 'online'; 
+}
 
 function getRowColByRoomName(roomName) {
   for (var row=0; row<rooms.length; row++) {
