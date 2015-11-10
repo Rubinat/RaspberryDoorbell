@@ -33,5 +33,3 @@ gpio-admin export 22
 gpio-admin export 21
 gpio-admin export 17
 gpio-admin export 4
-
-#nodemon /home/pi/TCP-Button/serverZwei.js

@@ -9,4 +9,7 @@ dist:
 	./node_modules/.bin/uglifyjs www/app.js -o www/app.min.js
 	./node_modules/.bin/html-dist index.html --remove-all --minify --insert app.min.js -o www/index.html
 
+deploy:
+	scp www/* pi@bel.vcxl.nl:/home/pi/RaspberryDoorbell/www/
+	
 .PHONY: all dist
