@@ -30,10 +30,10 @@ var rows = [
   new Gpio(4, 'out')
 ];*/
 var cols = [                  //pin
-  new Gpio(25, 'in', 'both'), //22
-  new Gpio(11, 'in', 'both'), //23
+  new Gpio(7, 'in', 'both'),  //26
   new Gpio(8, 'in', 'both'),  //24
-  new Gpio(7, 'in', 'both')   //26
+  new Gpio(11, 'in', 'both'), //23
+  new Gpio(25, 'in', 'both')  //22
 ];
 
 var rows = [                  //pin
