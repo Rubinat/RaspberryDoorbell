@@ -9,7 +9,7 @@ var app = express();
 var http = require('http').Server(app);
 var lastMessage = "";
 
-var cols = [
+/*var cols = [
 	new Gpio(23, 'in', 'both'),
 	new Gpio(18, 'in', 'both'),
 	new Gpio(15, 'in', 'both'),
@@ -28,6 +28,26 @@ var rows = [
   new Gpio(21, 'out'),
   new Gpio(17, 'out'),
   new Gpio(4, 'out')
+];*/
+var cols = [                  //pin
+  new Gpio(25, 'in', 'both'), //22
+  new Gpio(11, 'in', 'both'), //23
+  new Gpio(8, 'in', 'both'),  //24
+  new Gpio(7, 'in', 'both')   //26
+];
+
+var rows = [                  //pin
+  new Gpio(4, 'out'),         // 7
+  new Gpio(14, 'out'),        // 8
+  new Gpio(15, 'out'),        //10
+  new Gpio(17, 'out'),        //11
+  new Gpio(18, 'out'),        //12
+  new Gpio(21, 'out'),        //13
+  new Gpio(22, 'out'),        //15
+  new Gpio(23, 'out'),        //16
+  new Gpio(24, 'out'),        //18
+  new Gpio(10, 'out'),        //19
+  new Gpio(9, 'out')          //21
 ];
 
 var rooms = [
