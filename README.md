@@ -10,9 +10,13 @@ There's a status app at http://bel.vcxl.nl:8081.
 There's an API at: http://bel.vcxl.nl:8081/api/v1/status
 
 You can run the app on your computer by cloning this repository.
-Make sure you have installed nodejs and npm and run ```npm install```
+Make sure you have installed nodejs and npm and run `npm install`
 
-Launch the app by running ```make``` on your computer.
+Launch the app by running `make` on your computer.
+
+The app uses the 'React' framework. `app/main.js` is the main source file.
+
+Use `make dist` to create a minified version of the app. Then use `make deploy` to upload it using SCP to the server (RaspberryPi).
 
 ### Login through SSH
 ```
