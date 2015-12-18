@@ -10,7 +10,7 @@ There's a status app at http://bel.vcxl.nl:8081.
 There's an API at: http://bel.vcxl.nl:8081/api/v1/status
 
 You can run the app on your computer by cloning this repository.
-Make sure you have installed `nodej`s and `npm` and run `npm install`
+Make sure you have installed `nodejs` and `npm` and run `npm install`
 
 Launch the app by running `make` on your computer.
 
