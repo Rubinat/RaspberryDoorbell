@@ -1,5 +1,4 @@
 import React from 'react';
-// import { reposForUser } from './api';
 import Bellenbord from './bellenbord'
 
 class App extends React.Component {
@@ -7,6 +6,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>VechtclubXL Bellenbord</h1>
+        <p>groen = actief, oranje = langer dan 2 minuten geen contact, rood = geen verbinding</p>
         <Bellenbord />
       </div>
     )
