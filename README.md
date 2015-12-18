@@ -5,6 +5,11 @@ The server side of the wireless doorbell project (raspberry running a tcp node s
 
 See also http://github.com/Rubinat/doorbell for documentation.
 
+### Login through SSH
+```
+ssh pi@bel.vcxl.nl
+```
+
 ### API
 GET: http://bel.vcxl.nl:8081/api/v1/status
 
