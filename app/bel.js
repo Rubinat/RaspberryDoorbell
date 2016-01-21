@@ -1,12 +1,16 @@
 import React from 'react';
-import * as api from './api'
+import * as api from './api';
+import getURLParameter from './utils/getURLParameter.js';
 
 export default class Bel extends React.Component {
- 
+
   handleClick = () => {
-    api.ring(this.props.name).then((res) => {
-      console.log('ring...ring...response',res);
-    });
+    const ringEnabled = getURLParameter('ring');
+    if(ringEnabled !== null) {
+      api.ring(this.props.name).then((res) => {
+        console.log('ring...ring...response',res);
+      });
+    }
   }
 
   render() {
