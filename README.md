@@ -23,6 +23,12 @@ Use `make dist` to create a minified version of the app. Then use `make deploy` 
 ssh pi@bel.vcxl.nl
 ```
 
+### View logs:
+```
+tail -f /tmp/bell.log
+tail -f /tmp/bell-error.log
+```
+
 ### API
 GET: http://bel.vcxl.nl:8081/api/v1/status
 
