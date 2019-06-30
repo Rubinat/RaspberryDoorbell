@@ -1,0 +1,2 @@
+sudo killall -9 node
+node nodeServer.js
